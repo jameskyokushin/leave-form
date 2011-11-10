@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  employee_name: MyString
+  department: MyString
+  date_request: 2011-11-10
+  category_request: MyString
+  reason_for_leave: MyString
+  begining_date_of_leave: 2011-11-10 14:12:06
+  ending_date_of_leave: 2011-11-10 14:12:06
+  phone_no_during_leave: MyString
+  special_circumstance: MyText
+
+two:
+  employee_name: MyString
+  department: MyString
+  date_request: 2011-11-10
+  category_request: MyString
+  reason_for_leave: MyString
+  begining_date_of_leave: 2011-11-10 14:12:06
+  ending_date_of_leave: 2011-11-10 14:12:06
+  phone_no_during_leave: MyString
+  special_circumstance: MyText

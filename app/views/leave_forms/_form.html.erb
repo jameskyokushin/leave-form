@@ -1,0 +1,53 @@
+<%= form_for(@leave_form) do |f| %>
+  <% if @leave_form.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@leave_form.errors.count, "error") %> prohibited this leave_form from being saved:</h2>
+
+      <ul>
+      <% @leave_form.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :employee_name %><br />
+    <%= f.text_field :employee_name %>
+  </div>
+  <div class="field">
+    <%= f.label :department %><br />
+    <%= f.text_field :department %>
+  </div>
+  <div class="field">
+    <%= f.label :date_request %><br />
+    <%= f.date_select :date_request %>
+  </div>
+  <div class="field">
+    <%= f.label :category_request %><br />
+    <%= f.text_field :category_request %>
+  </div>
+  <div class="field">
+    <%= f.label :reason_for_leave %><br />
+    <%= f.text_field :reason_for_leave %>
+  </div>
+  <div class="field">
+    <%= f.label :begining_date_of_leave %><br />
+    <%= f.datetime_select :begining_date_of_leave %>
+  </div>
+  <div class="field">
+    <%= f.label :ending_date_of_leave %><br />
+    <%= f.datetime_select :ending_date_of_leave %>
+  </div>
+  <div class="field">
+    <%= f.label :phone_no_during_leave %><br />
+    <%= f.text_field :phone_no_during_leave %>
+  </div>
+  <div class="field">
+    <%= f.label :special_circumstance %><br />
+    <%= f.text_area :special_circumstance %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

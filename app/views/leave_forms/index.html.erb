@@ -1,0 +1,39 @@
+<h1>Listing leave_forms</h1>
+
+<table>
+  <tr>
+    <th>Employee name</th>
+    <th>Department</th>
+    <th>Date request</th>
+    <th>Category request</th>
+    <th>Reason for leave</th>
+    <th>Begining date of leave</th>
+    <th>Ending date of leave</th>
+    <th>Phone no during leave</th>
+    <th>Special circumstance</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @leave_forms.each do |leave_form| %>
+  <tr>
+    <td><%= leave_form.employee_name %></td>
+    <td><%= leave_form.department %></td>
+    <td><%= leave_form.date_request %></td>
+    <td><%= leave_form.category_request %></td>
+    <td><%= leave_form.reason_for_leave %></td>
+    <td><%= leave_form.begining_date_of_leave %></td>
+    <td><%= leave_form.ending_date_of_leave %></td>
+    <td><%= leave_form.phone_no_during_leave %></td>
+    <td><%= leave_form.special_circumstance %></td>
+    <td><%= link_to 'Show', leave_form %></td>
+    <td><%= link_to 'Edit', edit_leave_form_path(leave_form) %></td>
+    <td><%= link_to 'Destroy', leave_form, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Leave form', new_leave_form_path %>

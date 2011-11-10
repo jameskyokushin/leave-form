@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Employee name:</b>
+  <%= @leave_form.employee_name %>
+</p>
+
+<p>
+  <b>Department:</b>
+  <%= @leave_form.department %>
+</p>
+
+<p>
+  <b>Date request:</b>
+  <%= @leave_form.date_request %>
+</p>
+
+<p>
+  <b>Category request:</b>
+  <%= @leave_form.category_request %>
+</p>
+
+<p>
+  <b>Reason for leave:</b>
+  <%= @leave_form.reason_for_leave %>
+</p>
+
+<p>
+  <b>Begining date of leave:</b>
+  <%= @leave_form.begining_date_of_leave %>
+</p>
+
+<p>
+  <b>Ending date of leave:</b>
+  <%= @leave_form.ending_date_of_leave %>
+</p>
+
+<p>
+  <b>Phone no during leave:</b>
+  <%= @leave_form.phone_no_during_leave %>
+</p>
+
+<p>
+  <b>Special circumstance:</b>
+  <%= @leave_form.special_circumstance %>
+</p>
+
+
+<%= link_to 'Edit', edit_leave_form_path(@leave_form) %> |
+<%= link_to 'Back', leave_forms_path %>
