@@ -1,10 +1,12 @@
 Leave::Application.routes.draw do
+  devise_for :users
+
   resources :leave_forms
 
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
-   root :to => "home#index"
+   root :to => "leave_forms#index"
 
 
   # The priority is based upon order of creation:

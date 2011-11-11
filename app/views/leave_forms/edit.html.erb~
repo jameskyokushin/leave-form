@@ -1,4 +1,4 @@
-<div id="form1">
+<div id="form">
 <h1>Editing leave_form</h1>
 
 <%= render 'form' %>

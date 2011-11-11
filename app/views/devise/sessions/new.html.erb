@@ -1,0 +1,18 @@
+<div id="form">
+
+<br />
+<br />
+<br />
+
+<%= semantic_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+  <%= f.inputs "Sign in" do %>
+  <%= f.input :email %>
+  <%= f.input :password %>
+  <% end %>
+    <%= f.submit "Sign in" %>
+<% end %>
+<%= render :partial => "devise/shared/links" %>
+
+</div>
+
+
