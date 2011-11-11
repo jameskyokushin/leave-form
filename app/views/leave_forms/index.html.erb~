@@ -1,5 +1,5 @@
 <h1>For Approval</h1><br />
-<%= link_to 'Apply for Leave', new_leave_form_path %>
+<%= link_to 'Apply for New Leave', new_leave_form_path %>
 <table>
   <tr>
     <th>Status</th>
