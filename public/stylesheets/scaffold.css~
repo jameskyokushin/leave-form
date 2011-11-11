@@ -1,4 +1,4 @@
-body { background-color: #D8D8D8; color: #333; }
+body { background-color: #BDBDBD; color: #333; }
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
