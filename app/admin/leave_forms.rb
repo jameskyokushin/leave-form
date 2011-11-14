@@ -33,7 +33,7 @@ ActiveAdmin.register LeaveForm do
       f.input :begining_date_of_leave, :label => "Date Begin"
       f.input :ending_date_of_leave, :label => "Date End"
       f.input :phone_no_during_leave, :input_html => { :style => "width: 120px"}, :label => "Contact Number"
-      f.input :special_circumstance, :input_html => { :rows => 4 }, :label => "Speacial Circumstance (Explain)"
+      f.input :special_circumstance, :input_html => { :rows => 4 }, :label => "Special Circumstance (Explain)"
       f.input :status, :collection => LeaveForm.status_collection, :include_blank => false, :wrapper_html => { :style => "display:none;" }
     end
    f.buttons
