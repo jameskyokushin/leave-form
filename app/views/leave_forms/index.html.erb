@@ -2,10 +2,12 @@
 
 <h1>For Approval</h1><br />
 <div id="link">
-
+<%= current_user.email if user_signed_in? %>||
 <%= link_to 'Apply for Leave', new_leave_form_path %> ||
 <%= link_to "Sign out",  destroy_user_session_path,  :method=> :delete %>
 </div>
+<br />
+<br />
 <table>
   <tr>
     <th>Status</th>
@@ -44,5 +46,7 @@
 
 <br />
 </div>
+
+
 
 

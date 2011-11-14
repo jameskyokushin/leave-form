@@ -6,12 +6,15 @@
 
 <%= semantic_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= f.inputs "Sign up" do %>
-  <%= f.input :email %>
-  <%= f.input :password %>
-  <%= f.input :password_confirmation %>
-  <% end %>
-    <%= f.submit "Sign up" %>
+  <%= f.input :email, :input_html => { :style => "width: 320px"}  %>
+  <%= f.input :password, :input_html => { :style => "width: 320px"}  %>
+  <%= f.input :password_confirmation, :input_html => { :style => "width: 320px"}  %>
+  <br />
+  <%= f.submit "Sign up" %>
+  <br />
+  <%= render :partial => "devise/shared/links" %>
 <% end %>
-<%= render :partial => "devise/shared/links" %>
+<% end %>
+
 </div>
 

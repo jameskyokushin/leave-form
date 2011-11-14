@@ -1,4 +1,9 @@
 class LeaveFormsController < InheritedResources::Base
-before_filter :authenticate_user!
+ before_filter :authenticate_user!
 
+ def approved
+   @leaveform = LeaveForm.find(params[:id])
+   @leaveform.status = LeaveForm::STATUS_APPROVED
+   @leaveform.save
+ end
 end
