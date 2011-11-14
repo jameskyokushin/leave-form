@@ -1,5 +1,12 @@
-<div id="form1">
 
+<div id="form1">
+<h1>Leave Form</h1>
+<div id="link">
+<%= current_user.email if user_signed_in? %>||
+<%= link_to 'Apply for Leave', new_leave_form_path %> ||
+<%= link_to "Sign out",  destroy_user_session_path,  :method=> :delete %>
+</div>
+<br />
 <%= semantic_form_for(@leave_form) do |f| %>
   <%= f.inputs "Employee Details" do %>
   <%= f.input :employee_name %>
@@ -11,7 +18,7 @@
   <%= f.input :begining_date_of_leave, :label => "Date Begin" %>
   <%= f.input :ending_date_of_leave, :label => "Date End" %>
   <%= f.input :phone_no_during_leave, :input_html => { :style => "width: 120px"}, :label => "Contact Number" %>
-  <%= f.input :special_circumstance, :input_html => { :rows => 4 }, :label => "Speacial Circumstance (Explain)" %>
+  <%= f.input :special_circumstance, :input_html => { :rows => 4 }, :label => "Special Circumstance (Explain)" %>
   <%= f.input :status, :collection => LeaveForm.status_collection, :include_blank => false, :wrapper_html => { :style => "display:none;" } %>
   <% end %>
     <%= f.submit %>
