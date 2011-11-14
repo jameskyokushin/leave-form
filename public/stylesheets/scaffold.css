@@ -69,4 +69,9 @@ a:hover { color: #fff; background-color:#000; }
  float: right;
  font-weight: bold;
 }
+#link1 {
+ float: left;
+ font-weight: bold;
+}
+
 
