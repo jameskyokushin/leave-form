@@ -59,7 +59,7 @@ ActiveAdmin.register LeaveForm do
       status_tag leaveform.status, leaveform.status_tag
     end
      column :employee_name
-     column "Beginning" do |leaveform|
+     column "Beginning Date" do |leaveform|
       due = if leaveform.ending_date_of_leave
         " (leave in #{distance_of_time_in_words Time.now, leaveform.ending_date_of_leave})"
       else

@@ -1,4 +1,6 @@
 ActiveAdmin.register LeaveForm do
+filter :employee_name
+filter :department
 
  show :title => :employee_name do
     panel "Company Information" do
