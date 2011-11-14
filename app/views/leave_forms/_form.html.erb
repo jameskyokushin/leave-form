@@ -9,6 +9,7 @@
 <%= current_user.email if user_signed_in? %>
 </div>
 <br />
+<br />
 <%= semantic_form_for(@leave_form) do |f| %>
   <%= f.inputs "Employee Details" do %>
   <%= f.input :employee_name %>

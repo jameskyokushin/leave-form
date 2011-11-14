@@ -5,7 +5,7 @@
 <%= link_to 'Apply for Leave', new_leave_form_path %>
 </div>
 <div id="link">
-<%= link_to "Sign out",  destroy_user_session_path,  :method=> :delete %>||
+<%= link_to "Sign out",  destroy_user_session_path,  :method=> :delete %> ||
 <%= current_user.email if user_signed_in? %>
 </div>
 <br />

@@ -1,4 +1,20 @@
 ActiveAdmin.register LeaveForm do
+
+ show :title => :employee_name do
+    panel "Company Information" do
+      attributes_table_for leave_form do
+      row("Employee Name") { leave_form.employee_name }
+      row("Department") { leave_form.department }
+      row("Date Apply for Leave") { leave_form.date_request }
+      row("Request") { leave_form.category_request }
+      row("Reason") { leave_form.reason_for_leave }
+      row("Start of Leave") { leave_form.begining_date_of_leave }
+      row("End of Leave") { leave_form.ending_date_of_leave }
+      row("Contact Number During Leave") { leave_form.phone_no_during_leave }
+      row("Explanation") { simple_format leave_form.special_circumstance }
+      end
+    end
+  end
   scope :all, :default => true
 
   scope :PENDING do |leaveforms|

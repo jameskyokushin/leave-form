@@ -1,7 +1,18 @@
+
 <div id="form1">
-
 <p id="notice"><%= notice %></p>
-
+<h1>Preview</h1>
+<br />
+<div id="link1">
+<%= link_to 'for Approval', leave_forms_path %>||
+<%= link_to 'Apply for Leave', new_leave_form_path %>
+</div>
+<div id="link">
+<%= link_to "Sign out",  destroy_user_session_path,  :method=> :delete %> ||
+<%= current_user.email if user_signed_in? %>
+</div>
+<br />
+<br />
 <p>
   <b>Employee name:</b>
   <%= @leave_form.employee_name %>
@@ -48,6 +59,6 @@
 </p>
 
 
-<%= link_to 'Edit', edit_leave_form_path(@leave_form) %> |
-<%= link_to 'Back', leave_forms_path %>
+<!--<%= link_to 'Edit', edit_leave_form_path(@leave_form) %> |
+<%= link_to 'Back', leave_forms_path %> -->
 </div>
