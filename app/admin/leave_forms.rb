@@ -59,7 +59,15 @@ ActiveAdmin.register LeaveForm do
       status_tag leaveform.status, leaveform.status_tag
     end
      column :employee_name
-     column :begining_date_of_leave
+     column "Beginning Date" do |leaveform|
+      due = if leaveform.ending_date_of_leave
+        " (leave in #{distance_of_time_in_words Time.now, leaveform.ending_date_of_leave})"
+      else
+        ""
+      end
+      
+      "#{l leaveform.begining_date_of_leave, :format => :short}" + due
+    end
      column :ending_date_of_leave
      column do |leaveform|
       link_to("Details", admin_leave_form_path(leaveform)) + " | " + \
