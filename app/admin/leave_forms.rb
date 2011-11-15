@@ -63,7 +63,7 @@ filter :department
      column :employee_name
      column "Beginning Date" do |leaveform|
       due = if leaveform.ending_date_of_leave
-        " (leave in #{distance_of_time_in_words Time.now, leaveform.ending_date_of_leave})"
+        " ( #{distance_of_time_in_words Time.now, leaveform.ending_date_of_leave} before leave)"
       else
         ""
       end
