@@ -70,7 +70,7 @@ a:hover { color: #fff; background-color:#000; }
  font-weight: bold;
 }
 #link1 {
- float: right;
+ float: left;
  font-weight: bold;
 }
 
