@@ -1,4 +1,6 @@
 <div id="form1">
+<br />
+<br />
 <div id="link1">
 <%= link_to 'Listing Leave', leave_forms_path %>||
 <%= link_to 'Apply for Leave', new_leave_form_path %>
@@ -14,7 +16,7 @@
   <%= f.input :employee_name %>
   <%= f.input :department %>
   <%= f.input :date_request, :include_blank => false, :start_year => 2011 %>
-  <%= f.input :category_request, :collection => [["Paid","Paid"],["Unpaid","Unpaid"]], :as => :radio %>
+  <%= f.input :category_request, :collection => [["Unpaid","Unpaid"]], :as => :radio %>
   <%= f.input :reason_for_leave, :collection => [["Vacation / Personal Leave","Vacation / Personal Leave"],["Ill family Member","Ill family Member"],["Employee's Own Illness", "Employee's Own Illness"],["Care for new child", "Care for new child"]], :as => :radio, :label => " Reason for Leave ", :include_blank => false%>
   <%= f.inputs "Leave Date" %>
   <%= f.input :begining_date_of_leave, :label => "Date Begin" %>

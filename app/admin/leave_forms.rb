@@ -44,7 +44,7 @@ filter :department
       f.input :employee_name
       f.input :department
       f.input :date_request
-      f.input :category_request, :collection => [["Paid","Paid"],["Unpaid","Unpaid"]], :as => :radio
+      f.input :category_request, :collection => [["Unpaid","Unpaid"]], :wrapper_html => { :style => "display:none;" },:include_blank => false
       f.input :reason_for_leave, :collection => [["Vacation / Personal Leave","Vacation / Personal Leave"],["Ill family Member","Ill family Member"],["Employee's Own Illness", "Employee's Own Illness"],["Care for new child", "Care for new child"]], :as => :radio, :label => " Reason for Leave ", :include_blank => false
     end
     f.inputs "Leave Date" do
@@ -61,15 +61,15 @@ filter :department
       status_tag leaveform.status, leaveform.status_tag
     end
      column :employee_name
-     column "Beginning Date" do |leaveform|
-      due = if leaveform.ending_date_of_leave
-        " ( #{distance_of_time_in_words Time.now, leaveform.ending_date_of_leave} before leave)"
-      else
-        ""
-      end
+     #column "Beginning Date" do |leaveform|
+     # due = if leaveform.ending_date_of_leave
+     #   " ( #{distance_of_time_in_words Time.now, leaveform.ending_date_of_leave} before leave)"
+     # else
+     #   ""
+     # end
       
-      "#{l leaveform.begining_date_of_leave, :format => :short}" + due
-    end
+     # "#{l leaveform.begining_date_of_leave, :format => :short}" + due
+   # end
      column :ending_date_of_leave
      column do |leaveform|
       link_to("Details", admin_leave_form_path(leaveform)) + " | " + \
