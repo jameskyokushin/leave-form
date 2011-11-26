@@ -28,10 +28,21 @@ filter :department
   end
 
   action_item :only => :show do
-    link_to "Approved", send_leave_form_admin_leave_form_path(resource)
+    link_to "Approved", approved_leave_form_admin_leave_form_path(resource)
+  end
+  action_item :only => :show do
+    link_to "Declined", declined_leave_form_admin_leave_form_path(resource)
   end
   
-  member_action :send_leave_form do
+  member_action :declined_leave_form do
+    @leaveform = LeaveForm.find(params[:id])
+    @leaveform.status = LeaveForm::STATUS_DECLINED
+    @leaveform.save
+    
+    redirect_to admin_leave_form_path(@leaveform), :notice => "Leave Declined"
+  end
+
+  member_action :approved_leave_form do
     @leaveform = LeaveForm.find(params[:id])
     @leaveform.status = LeaveForm::STATUS_APPROVED
     @leaveform.save
@@ -61,15 +72,15 @@ filter :department
       status_tag leaveform.status, leaveform.status_tag
     end
      column :employee_name
-     #column "Beginning Date" do |leaveform|
-     # due = if leaveform.ending_date_of_leave
-     #   " ( #{distance_of_time_in_words Time.now, leaveform.ending_date_of_leave} before leave)"
-     # else
-     #   ""
-     # end
+     column :begining_date_of_leave #do |leaveform|
+      #due = if leaveform.ending_date_of_leave
+      #  " ( #{distance_of_time_in_words Time.now, leaveform.ending_date_of_leave} before leave)"
+      #else
+      #  ""
+      #end
       
-     # "#{l leaveform.begining_date_of_leave, :format => :short}" + due
-   # end
+      #"#{l leaveform.begining_date_of_leave, :format => :short}" + due
+    #end
      column :ending_date_of_leave
      column do |leaveform|
       link_to("Details", admin_leave_form_path(leaveform)) + " | " + \
