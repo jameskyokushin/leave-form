@@ -1,4 +1,6 @@
 <div id="form1">
+<br />
+<br />
 <div id="link1">
 <%= link_to 'Listing Leave', leave_forms_path %>||
 <%= link_to 'Apply for Leave', new_leave_form_path %>
@@ -39,8 +41,8 @@
     <!--<td><%= leave_form.phone_no_during_leave %></td>
     <td><%= leave_form.special_circumstance %></td>-->
     <td><%= link_to 'Preview', leave_form %></td>
-    <!--<td><%= link_to 'Edit', edit_leave_form_path(leave_form) %></td>
-    <td><%= link_to 'Destroy', leave_form, :confirm => 'Are you sure?', :method => :delete %></td>-->
+    <td><a href="http://leave-form.heroku.com/admin/">Ruby on Rails Tutorial</a></td>
+    <!--<td><%= link_to 'Destroy', leave_form, :confirm => 'Are you sure?', :method => :delete %></td>-->
   </tr>
 <% end %>
 </table>
