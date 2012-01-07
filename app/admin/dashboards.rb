@@ -5,7 +5,7 @@ ActiveAdmin::Dashboards.build do
       column "Company", :employee_name do |leaveforms|
         link_to leaveforms.employee_name, [:admin, leaveforms]
       end
-      column :date_request
+      column :created_at
       column :category_request
       column :begining_date_of_leave
       column :ending_date_of_leave
