@@ -39,7 +39,7 @@ filter :department
     @leaveform.status = LeaveForm::STATUS_DECLINED
     @leaveform.save
     
-    redirect_to admin_leave_form_path(@leaveform), :notice => "Leave Declined Completed"
+    redirect_to admin_leave_form_path(@leaveform), :notice => "Leave Declined"
   end
 
   member_action :approved_leave_form do
