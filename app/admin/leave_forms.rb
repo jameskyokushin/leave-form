@@ -72,6 +72,7 @@ filter :department
       status_tag leaveform.status, leaveform.status_tag
     end
      column :employee_name
+     column :created_at
      column :begining_date_of_leave #do |leaveform|
       #due = if leaveform.ending_date_of_leave
       #  " ( #{distance_of_time_in_words Time.now, leaveform.ending_date_of_leave} before leave)"
