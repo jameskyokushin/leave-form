@@ -68,6 +68,8 @@ filter :department
    f.buttons
   end
   index do
+     column :created_at |leaveform|
+  
      column :status do |leaveform|
       status_tag leaveform.status, leaveform.status_tag
     end
